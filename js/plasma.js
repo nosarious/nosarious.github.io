@@ -258,6 +258,7 @@ function loop()
      hexHeight = Math.sin(hexagonAngle) * sideLength;
      hexRadius = Math.cos(hexagonAngle) * sideLength;
      hexRectangleHeight = sideLength+2  * hexHeight;
+    hexRectangleWidth = 2 * hexRadius;
      
      ctx.beginPath();
         ctx.moveTo(xStart + hexRadius, yStart);
