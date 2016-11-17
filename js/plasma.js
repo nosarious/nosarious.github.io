@@ -19,7 +19,7 @@ var g_canvas;
 var g_framestart;
 
 window.addEventListener('load', onloadHandler, false);
-window.addEventListener('resize', resizeHandler, false);
+window.addEventListener('resize', resizeHandler, true);
 
 /**
  * Global window onload handler
@@ -33,7 +33,7 @@ function onloadHandler()
     
     // create the Plasma object
     g_plasma = new Plasma();
-/*    
+    /*
     // create the GUI controls
     var gui = new DAT.GUI(); // height of 30px per control ish
     gui.domElement.style.opacity = "0.75";
@@ -46,9 +46,10 @@ function onloadHandler()
     gui.add(g_plasma, "Alpha").min(0.1).max(1.0).step(0.1);
     gui.add(g_plasma, "ShowFPS");
     gui.close();
-    */
+    
     // init the animation loop
     g_framestart = Date.now();
+    */
     requestAnimFrame(loop);
 }
 
@@ -155,7 +156,7 @@ function loop()
  // init public properties for the GUI controls
  this.CycleSpeed = 1;
  this.ShowFPS = true;
- this.PlasmaDensity = 20;
+ this.PlasmaDensity = 16;
  this.TimeFunction = 1000;
  this.PlasmaFunction = 1;
  this.Jitter = 0;
@@ -230,48 +231,64 @@ function loop()
  var jitter = this.Jitter ? (-this.Jitter + (Math.random()*this.Jitter*2)) : 0;
  var addThis  = 0;
  var extraRound = 1;
- for (var y=0,x; y<ph; y++)
+
+
+
+ for (var y=0,x; y<ph+3; y++)
  {
   if (y%2){ 
     addThis = vpx/2; 
-    extraRound = 0;
+    //extraRound = 0;
   } else {
     addThis = 0;
-    extraRound = 1;
+    //extraRound = 1;
   }
  for (x=0; x<pw+extraRound; x++)
  {
  // map plasma pixels to canvas pixels using the virtual pixel size
  ctx.fillStyle = palette[(~~colour(x, y) + paletteoffset) % 256];
- //ctx.shadowBlur=5;
-//ctx.shadowColor="black";
- //ctx.fillRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
-     var hexHeight,
-        hexRadius,
-        hexRectangleHeight,
-        hexRectangleWidth,
+
+ var hexHeight,
+        hexUp,
+        hexOver,
         hexagonAngle = 0.523598776; // 30 degrees in radians
          
      var xStart = x * vpx + jitter + addThis;
-     var yStart = y * vpy + jitter;
-     var sideLength = vpx/2;
-     hexHeight = Math.sin(hexagonAngle) * sideLength;
-     hexRadius = Math.cos(hexagonAngle) * sideLength;
-     hexRectangleHeight = sideLength+2  * hexHeight;
-    hexRectangleWidth = 2 * hexRadius;
-     
-     ctx.beginPath();
-        ctx.moveTo(xStart + hexRadius, yStart);
-        ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight);
-        ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight + sideLength);
-        ctx.lineTo(xStart + hexRadius, yStart + hexRectangleHeight);
-        ctx.lineTo(xStart, yStart + sideLength + hexHeight);
-        ctx.lineTo(xStart, yStart + hexHeight);
-     ctx.closePath();
+     var yStart = y * vpy/1.25 + jitter;
+     var sideLength = vpy/1.75;
+     hexOver = Math.sin(hexagonAngle) * sideLength;
+     hexUp = Math.cos(hexagonAngle) * sideLength;
 
-//ctx.beginPath();
-//ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
+ 
+
+    ctx.beginPath();
+        ctx.moveTo(xStart - hexUp, yStart - hexOver);
+        ctx.lineTo(xStart  , yStart - sideLength);
+        ctx.lineTo(xStart + hexUp, yStart - hexOver);
+        ctx.lineTo(xStart + hexUp, yStart + hexOver);
+        ctx.lineTo(xStart , yStart + sideLength);
+        ctx.lineTo(xStart - hexUp, yStart + hexOver);
+     ctx.closePath();
+     /*
+     ctx.beginPath();
+        ctx.moveTo(xStart - sideLength, yStart);
+        ctx.lineTo(xStart - sideLength + hexOver, yStart - hexUp);
+        ctx.lineTo(xStart + sideLength - hexOver, yStart - hexUp);
+        ctx.lineTo(xStart + sideLength, yStart );
+        ctx.lineTo(xStart + sideLength - hexOver, yStart + hexUp);
+        ctx.lineTo(xStart - sideLength + hexOver, yStart + hexUp);
+     ctx.closePath();
+     */
+     ctx.fill();
+ /*
+ ctx.shadowBlur=5;
+ctx.shadowColor="black";
+ //ctx.fillRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
+
+ctx.beginPath();
+ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
 ctx.fill();
+*/
 /*
 ctx.strokeStyle="#ffffff";
 ctx.strokeRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
