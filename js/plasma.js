@@ -254,10 +254,10 @@ function loop()
          
      var xStart = x * vpx + jitter + addThis;
      var yStart = y * vpy + jitter;
-     var sideLength = vpx/2;
-    hexHeight = Math.sin(hexagonAngle) * sideLength;
-    hexRadius = Math.cos(hexagonAngle) * sideLength;
-    hexRectangleHeight = sideLength+2  * hexHeight;
+     hexHeight  = vpx/2;
+    var sideLength = Math.sin(hexagonAngle) * hexHeight;
+    hexRadius = Math.cos(hexagonAngle) * hexHeight;
+    hexRectangleHeight = sideLength+2  * hexRadius;
     hexRectangleWidth = 2 * hexRadius;
      
      ctx.beginPath();
