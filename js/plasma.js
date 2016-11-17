@@ -234,7 +234,7 @@ function loop()
 
 
 
- for (var y=0,x; y<ph+3; y++)
+ for (var y=0,x; y<ph+6; y++)
  {
   if (y%2){ 
     addThis = vpx/2; 
