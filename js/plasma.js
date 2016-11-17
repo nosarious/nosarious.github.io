@@ -280,6 +280,9 @@ function loop()
      ctx.closePath();
      */
      ctx.fill();
+     
+     ctx.shadowBlur=5;
+ctx.shadowColor="black";
      ctx.strokeStyle="#ffffff";
      ctx.stroke();
  /*
