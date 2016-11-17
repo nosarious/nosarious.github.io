@@ -155,7 +155,7 @@ function loop()
  // init public properties for the GUI controls
  this.CycleSpeed = 1;
  this.ShowFPS = true;
- this.PlasmaDensity = 16;
+ this.PlasmaDensity = 20;
  this.TimeFunction = 1000;
  this.PlasmaFunction = 1;
  this.Jitter = 0;
