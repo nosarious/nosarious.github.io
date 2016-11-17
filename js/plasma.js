@@ -281,7 +281,7 @@ function loop()
      */
      ctx.fill();
      ctx.strokeStyle="#ffffff";
-     
+     ctx.stroke();
  /*
  ctx.shadowBlur=5;
 ctx.shadowColor="black";
