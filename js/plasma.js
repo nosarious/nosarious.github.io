@@ -269,8 +269,8 @@ function loop()
         ctx.lineTo(xStart, y + hexHeight);
      ctx.closePath();
 
-ctx.beginPath();
-ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
+//ctx.beginPath();
+//ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
 ctx.fill();
 /*
 ctx.strokeStyle="#ffffff";
