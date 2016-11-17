@@ -261,8 +261,8 @@ function loop()
     hexRectangleWidth = 2 * hexRadius;
      
      ctx.beginPath();
-        ctx.moveTo(xStart + hexRadius, yStart);
-        ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight);
+        ctx.moveTo(xStart - hexRadius, yStart);
+        ctx.lineTo(xStart - hexRectangleWidth, yStart + hexHeight);
         ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight + sideLength);
         ctx.lineTo(xStart + hexRadius, yStart + hexRectangleHeight);
         ctx.lineTo(xStart, yStart + sideLength + hexHeight);
