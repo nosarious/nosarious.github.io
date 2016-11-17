@@ -254,7 +254,7 @@ function loop()
          
      var xStart = x * vpx + jitter + addThis;
      var yStart = y * vpy + jitter;
-     var sideLength = vpx;
+     var sideLength = vpx/2;
     hexHeight = Math.sin(hexagonAngle) * sideLength;
     hexRadius = Math.cos(hexagonAngle) * sideLength;
     hexRectangleHeight = sideLength + 2 * hexHeight;
