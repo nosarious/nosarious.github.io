@@ -243,9 +243,31 @@ function loop()
  {
  // map plasma pixels to canvas pixels using the virtual pixel size
  ctx.fillStyle = palette[(~~colour(x, y) + paletteoffset) % 256];
- ctx.shadowBlur=5;
-ctx.shadowColor="black";
+ //ctx.shadowBlur=5;
+//ctx.shadowColor="black";
  //ctx.fillRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
+     var hexHeight,
+        hexRadius,
+        hexRectangleHeight,
+        hexRectangleWidth,
+        hexagonAngle = 0.523598776; // 30 degrees in radians
+         
+     var xStart = x * vpx + jitter + addThis;
+     var yStart = y * vpy + jitter;
+     var sideLength = vpx;
+    hexHeight = Math.sin(hexagonAngle) * sideLength;
+    hexRadius = Math.cos(hexagonAngle) * sideLength;
+    hexRectangleHeight = sideLength + 2 * hexHeight;
+    hexRectangleWidth = 2 * hexRadius;
+     
+     ctx.beginPath();
+        ctx.moveTo(xStart + hexRadius, y);
+        ctx.lineTo(xStart + hexRectangleWidth, y + hexHeight);
+        ctx.lineTo(xStart + hexRectangleWidth, y + hexHeight + sideLength);
+        ctx.lineTo(xStart + hexRadius, y + hexRectangleHeight);
+        ctx.lineTo(xStart, y + sideLength + hexHeight);
+        ctx.lineTo(xStart, y + hexHeight);
+     ctx.closePath();
 
 ctx.beginPath();
 ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
