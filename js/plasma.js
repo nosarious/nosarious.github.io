@@ -257,12 +257,12 @@ function loop()
      var sideLength = vpx/2;
     hexHeight = Math.sin(hexagonAngle) * sideLength;
     hexRadius = Math.cos(hexagonAngle) * sideLength;
-    hexRectangleHeight = sideLength + 2 * hexHeight;
+    hexRectangleHeight = sideLength  * hexHeight;
     hexRectangleWidth = 2 * hexRadius;
      
      ctx.beginPath();
-        ctx.moveTo(xStart - hexRadius, yStart);
-        ctx.lineTo(xStart - hexRectangleWidth, yStart + hexHeight);
+        ctx.moveTo(xStart + hexRadius, yStart);
+        ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight);
         ctx.lineTo(xStart + hexRectangleWidth, yStart + hexHeight + sideLength);
         ctx.lineTo(xStart + hexRadius, yStart + hexRectangleHeight);
         ctx.lineTo(xStart, yStart + sideLength + hexHeight);
