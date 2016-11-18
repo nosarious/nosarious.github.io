@@ -197,7 +197,7 @@ function loop()
  pw = this.PlasmaDensity, ph = (pw * (h/w)),    // plasma source width and height
  ctx = g_canvas.getContext('2d'),
  palette = this.palettes[this.PaletteIndex],
- paletteoffset = this.paletteoffset+50,//+=this.CycleSpeed,
+ paletteoffset = this.paletteoffset+=this.CycleSpeed,
  plasmafun = this.PlasmaFunction;
  // scale the plasma source to the canvas width/height
 
@@ -239,7 +239,7 @@ function loop()
 
 
 
- for (var y=0,x; y<ph+10; y++)
+ for (var y=0,x; y<ph+6; y++)
  {
   if (y%2){ 
     addThis = vpx/2; 
