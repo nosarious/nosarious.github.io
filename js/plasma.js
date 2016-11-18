@@ -154,7 +154,7 @@ function loop()
  this.palettes.push(palette);
  
  // init public properties for the GUI controls
- this.CycleSpeed = 1;
+ this.CycleSpeed = 1.0;
  this.ShowFPS = true;
  this.PlasmaDensity = 16;
  this.TimeFunction = 1000;
@@ -177,6 +177,7 @@ function loop()
  Jitter: 0,
  Alpha: 0.0,
  PaletteIndex: 0,
+
  
  // internal properties
  paletteoffset: 0,
@@ -191,13 +192,17 @@ function loop()
  HEIGHT = window.innerHeight;
  var w = WIDTH, h = HEIGHT,                      // canvas width and height
  
+
  
  pw = this.PlasmaDensity, ph = (pw * (h/w)),    // plasma source width and height
  ctx = g_canvas.getContext('2d'),
  palette = this.palettes[this.PaletteIndex],
- paletteoffset = this.paletteoffset+=this.CycleSpeed,
+ paletteoffset = this.paletteoffset+50,//+=this.CycleSpeed,
  plasmafun = this.PlasmaFunction;
  // scale the plasma source to the canvas width/height
+
+
+ if (w>480) this.PlasmaDensity = 32;
  var vpx = (w/pw), vpy = (h/ph);
  
  var dist = function dist(a, b, c, d)
@@ -234,7 +239,7 @@ function loop()
 
 
 
- for (var y=0,x; y<ph+6; y++)
+ for (var y=0,x; y<ph+10; y++)
  {
   if (y%2){ 
     addThis = vpx/2; 
@@ -283,22 +288,10 @@ function loop()
      ctx.lineWidth=3;
      ctx.strokeStyle="#000000";
      ctx.stroke();
-ctx.lineWidth=1;
+     ctx.lineWidth=1;
      ctx.strokeStyle="#ffffff";
      ctx.stroke();
- /*
- ctx.shadowBlur=5;
-ctx.shadowColor="black";
- //ctx.fillRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
-
-ctx.beginPath();
-ctx.arc(x * vpx + jitter + addThis, y * vpy + jitter,vpx/2+2,0,2*Math.PI);
-ctx.fill();
-*/
-/*
-ctx.strokeStyle="#ffffff";
-ctx.strokeRect(x * vpx + jitter, y * vpy + jitter, vpx, vpy);
- */
+ 
  }
  }
  ctx.restore();
