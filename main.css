@@ -76,6 +76,10 @@ table{
     $MAIN
 \*------------------------------------*/
 
+body{
+    max-width:600px;
+}
+
 .title {
     text-align: center;
     font-size:300%;
@@ -83,6 +87,10 @@ table{
 
 .imageholder {
     width:100%;
+    height:auto;
+}
+.imageholder-sm {
+    width:40%;
     height:auto;
 }
 
