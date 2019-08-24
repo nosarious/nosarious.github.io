@@ -1,0 +1,141 @@
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  #home {
+  	width:100%;
+	margin-left:auto; 
+	margin-right:auto;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d ;
+	}
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  .title {
+  	font-family: 'Bitter', serif;
+  	font-size: 80px ;
+  	color: white;
+  	text-align: center;
+  	padding-top: 25%;
+  	width: 100%;
+  	text-shadow: 2px 2px 4px black;
+  	display: block;
+  }
+
+  .subtitle {
+  	font-family: 'Roboto', sans-serif;
+  	font-size: 28px;
+  	color: white;
+  	text-align: center;
+  	position: relative;
+  	text-shadow: -1px -1px 2px white;
+  	display: block;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+
+  body {
+  	font-family: 'Roboto', sans-serif;
+  	width: 100%;
+  	height: 100%;
+  }
+
+  .middle-column{
+  	text-align: center;
+  }
+
+  .body-text{
+  	font-family: 'Roboto', sans-serif;
+  	width: 100%;
+  	height: 100%;
+  	font-size: 20px;
+  	color: black;
+  	text-align: left;
+  	display:inline-block;
+  	margin: 10px;
+  	padding: 10px;
+  	max-width:500px;
+}
+p{
+	height:auto;
+	margin-top:10px;
+}
+
+  html {
+  	height: 100%;
+  }
+
+.btn-group button {
+	display: block;
+	font-size: 28px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #707070;
+	border-radius: 8px;
+	border: 1px solid black; /* Green border */
+	color: white; /* White text */
+	padding: 10px ; /* Some padding */
+	margin: 5px;
+	cursor: pointer; /* Pointer/hand icon */
+	float: left; /* Float the buttons side by side */
+	box-shadow: -1px -1px 2px white;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #808080;
+  box-shadow: 1px 1px 2px white;
+}
+/*
+  .button {
+  	width: 10px;
+  	padding: 10px ;
+  	background-color: grey;
+  	border-radius: 5px;
+  	box-shadow: -1px -1px 2px white;
+  }
+*/
+  .mainPage {
+  	width: auto;
+  	height: 100%;
+  	min-height: 100%;
+	background-image: url("images/lonesome-cases_23.jpg");
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+  }
+
+  .mainHolder {
+  	width: 100%;
+  	height: 100%;
+  }
+  .button-holder{
+  	display: flex;
+	  flex-direction: column;
+	  width: 100%;
+  }
+
+  .image-holder {
+  	overflow: hidden;
+  	object-fit: cover;
+  }
