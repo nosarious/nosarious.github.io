@@ -59,13 +59,13 @@
   	color: black;
   	text-align: left;
   	display:inline-block;
-  	margin: 10px;
   	padding: 10px;
   	max-width:500px;
 }
+
 p{
 	height:auto;
-	margin-top:10px;
+	margin-to:p10px;
 }
 
   html {
@@ -113,16 +113,16 @@ p{
   }
 */
   .mainPage {
-  	width: auto;
-  	height: 100%;
-  	min-height: 100%;
+	width: auto;
+	height: 100%;
+	min-height: 100%;
 	background-image: url("images/lonesome-cases_23.jpg");
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
   }
 
   .mainHolder {
@@ -138,4 +138,26 @@ p{
   .image-holder {
   	overflow: hidden;
   	object-fit: cover;
+  }
+
+  .info-card {
+  	text-align: center;
+  	width: 80%;
+  	max-width: 400px;
+  	margin: auto;
+  	margin-bottom: 20px;
+  	min-height: 200px;
+  	background-color: #A0a0A0;
+	box-shadow: -1px -1px 4px white;
+	border: 1px solid black; /* Green border */
+  }
+
+  .info-card-image {
+  	height:200px;
+  	width: 200px;
+	border: 1px solid black; /* Green border */
+  }
+
+  .info-card:hover{
+	box-shadow: 1px 1px 4px white;
   }
