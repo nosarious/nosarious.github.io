@@ -1,77 +1,4 @@
 
-  * { margin:0; padding:0; box-sizing:border-box; }
-
-  #home {
-  	width:100%;
-	margin-left:auto; 
-	margin-right:auto;
-  }
-
-  body {
-    font-family: Georgia, "Times New Roman",
-          Times, serif;
-    color: purple;
-    background-color: #d8da3d ;
-	}
-  h1 {
-    font-family: Helvetica, Geneva, Arial,
-          SunSans-Regular, sans-serif }
-  .title {
-  	font-family: 'Bitter', serif;
-  	font-size: 80px ;
-  	color: white;
-  	text-align: center;
-  	padding-top: 25%;
-  	width: 100%;
-  	text-shadow: 2px 2px 4px black;
-  	display: block;
-  }
-
-  .subtitle {
-  	font-family: 'Roboto', sans-serif;
-  	font-size: 28px;
-  	color: white;
-  	text-align: center;
-  	position: relative;
-  	text-shadow: -1px -1px 2px white;
-  	display: block;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  }
-
-  body {
-  	font-family: 'Roboto', sans-serif;
-  	width: 100%;
-  	height: 100%;
-  }
-
-  .middle-column{
-  	text-align: center;
-  }
-
-  .body-text{
-  	font-family: 'Roboto', sans-serif;
-  	width: 100%;
-  	height: 100%;
-  	font-size: 20px;
-  	color: black;
-  	text-align: left;
-  	display:inline-block;
-  	padding: 10px;
-  	max-width:500px;
-}
-
-p{
-	height:auto;
-	margin-to:p10px;
-}
-
-  html {
-  	height: 100%;
-  }
-
 .btn-group button {
 	display: block;
 	font-size: 28px;
@@ -135,29 +62,125 @@ p{
 	  width: 100%;
   }
 
-  .image-holder {
-  	overflow: hidden;
-  	object-fit: cover;
-  }
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
 
-  .info-card {
-  	text-align: center;
-  	width: 80%;
-  	max-width: 400px;
-  	margin: auto;
-  	margin-bottom: 20px;
-  	min-height: 200px;
-  	background-color: #A0a0A0;
-	box-shadow: -1px -1px 4px white;
-	border: 1px solid black; /* Green border */
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
 
-  .info-card-image {
-  	height:200px;
-  	width: 200px;
-	border: 1px solid black; /* Green border */
-  }
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
-  .info-card:hover{
-	box-shadow: 1px 1px 4px white;
-  }
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: goldenrod;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+/* Styles for the hero image */
+.hero {
+  /* Photo by mnm.all on Unsplash */
+  background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+  background-size: cover;
+  padding: 4rem 2rem;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hero > article > a {
+  padding: 1rem;
+  margin-top: .75rem;
+}
+
+/* breweries styles */
+.artcard {
+  padding: 2rem;
+}
+
+.artcard > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.artcard > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.artcard > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+
+.artcard > ul > li > figure > img {
+  width: 100%;
+}
+
+.artcard > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.artcard > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.artcard > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+.artcard > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
+}
