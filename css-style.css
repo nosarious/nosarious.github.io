@@ -6,6 +6,7 @@
     	align-items: center;
     	justify-content: center;
 	background-color: rgba(200,200,200,0.85);
+	position:fixed;
   }
 .btn-group button {
 	display: block;
