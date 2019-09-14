@@ -1,4 +1,12 @@
 
+
+  .button-holder{
+  	display: flex;
+	flex-direction: column;
+	width: 100%;
+    	align-items: center;
+    	justify-content: center;
+  }
 .btn-group button {
 	display: block;
 	font-size: 28px;
@@ -65,11 +73,6 @@
   .mainHolder {
   	width: 100%;
   	height: 100%;
-  }
-  .button-holder{
-  	display: flex;
-	  flex-direction: column;
-	  width: 100%;
   }
 
 /* Typography imported from Google Fonts */
