@@ -39,6 +39,16 @@
   	box-shadow: -1px -1px 2px white;
   }
 */
+
+#header {
+	height: 50px;
+	width: 100%;
+	text-align:centered;
+	margin: 0px auto;
+}
+
+
+
   .mainPage {
 	width: auto;
 	height: 100%;
