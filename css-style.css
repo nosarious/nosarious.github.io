@@ -1,13 +1,19 @@
 
 
-  .button-holder{
-  	display: flex;
-	width: 100%;
-    	align-items: center;
-    	justify-content: center;
-	background-color: rgba(200,200,200,0.85);
-	position:fixed;
-  }
+.button-holder{
+	display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(200,200,200,0.85);
+  position:fixed;
+}
+
+.button-holder .title{
+  padding-left:20px;
+  padding-right:20px;
+}
+
 .btn-group button {
 	display: block;
 	font-size: 28px;
@@ -71,26 +77,37 @@
 	align-items: center;
   }
 
-  .mainHolder {
-  	width: 100%;
-  	height: 100%;
-  }
+.main-holder {
+	width: auto;
+	height: 100%;
+  text-align: center;
+  display: flex;
+}
+
+
 
 .main-content{
-  flex-direction: column;
+  padding-top:100px;
+  display: flex;
+  width:auto;
   justify-content: center;
-  align-items: center;
 }
 
 .middle-column{
   width: 70%;
-  justify-content: justify;
-  float: left;
+  max-width:600px;
+  padding:15px;
+  display: block;
+}
+
+.middle-column p{
+  padding-bottom:1rem;
 }
 
 .picture-column{
   width: 20%;
   float: left;
+  display: block;
 }
 
 .picture-column img{
@@ -107,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25rem;
 }
 
 /* Generic styles */
@@ -201,7 +219,7 @@ a:hover {
 }
 
 .artcard > ul > li > p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   padding: 1rem .75rem;
   color: #666666;
