@@ -1,4 +1,7 @@
 
+body{
+  margin: 0px;
+}
 
 .button-holder{
 	display: flex;
@@ -62,7 +65,27 @@
 	margin: 0px auto;
 }
 
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 
+.full-page{
+  /* Photo by mnm.all on Unsplash */
+  background: url('images/lonesome-cases_23.jpg') center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+.full-page h1{
+  
+  align-items: center;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+      text-align: center;
+}
 
 .mainPage {
 	width: auto;
@@ -191,6 +214,7 @@ a:hover {
 .artcard > ul > li {
   border: 1px solid #E2E2E2;
   border-radius: .5rem;
+  list-style: none;
 }
 
 .artcard > ul > li > figure {
@@ -199,11 +223,17 @@ a:hover {
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
   position: relative;
+
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
 }
 
 .artcard > ul > li > figure > img {
   width: 100%;
-}
+  }
 
 .artcard > ul > li > figure > figcaption {
   position: absolute;
@@ -228,6 +258,18 @@ a:hover {
 .artcard > ul > li > a {
   padding: .5rem 1rem;
   margin: .5rem;
+}
+
+.middle {
+  margin-top:-25%;
+}
+
+.bottom {
+  margin-top: -50%;
+}
+
+.top{
+  margin-top: 0px;
 }
 
 /* footer */
