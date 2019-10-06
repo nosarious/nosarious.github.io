@@ -146,6 +146,14 @@ body{
   display: block;
 }
 
+.middle-column img{
+  max-width:100%;
+  height: auto;
+  padding: 0px;
+  margin:0px;
+  text-indent:0px;
+}
+
 .middle-column p{
   padding-bottom:1rem;
 }
