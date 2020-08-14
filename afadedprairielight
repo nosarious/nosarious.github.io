@@ -1,0 +1,99 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@nosarious 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+nosarious
+/
+nosarious.github.io
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+nosarious.github.io/publishing_engine.html
+@nosarious
+nosarious Update publishing_engine.html
+Latest commit 15cef46 on Mar 2
+ History
+ 1 contributor
+51 lines (37 sloc)  4.2 KB
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Gerry Straathof, Artist</title>
+	<link rel="stylesheet" href="main.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Roboto&display=swap" rel="stylesheet">
+
+	<link href="css-style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="main-holder">
+	<div class = "button-holder">
+	  <h1 class="title">  Ger's Art  </h1>
+		<div class = "btn-group">
+			<a href="index.html"><button> Home </button></a>
+			<a href="portfolio.html"><button> Portfolio </button></a>
+			<a href="research.html"><button> Research </button></a>
+		</div>
+	</div>
+
+
+<div class = "main-content">
+	<div class = "middle-column">
+		<div class = "body-text">
+			
+			<p><b>A Faded Prairie Light</b> is a series of experiments about lighting in abandoned structures on the Canadian Prairies.</p>
+
+		  <p>This project is inspired by the voyeurism of a type of photography called ruin porn, as well ass looking within the windows of an abandoned homestead house in the prairies. This project was originally conceived as a series of time-lapse videos taken as light travels through a building during sunsetss, or as vehicles go by late at night before Covid-19 began to make visiting these places irresponsible. </p>
+		  <p>Instead of a house, however, I have constructed a miniature building to allow me to explore these conceptss. This structure is the same as another building created for play and voyeurism, the dollhouse, but is designed to appear decayed instead of pristine. </p>
+		  <p>The inspiration for the design, decisions for walls and floors are based upon houses I photographed in 2003 in Camrose, Alberta.</p>
+      <p>The simple floorplan for this initial exploration of space is from research into catalog houses from the early 1900's, done while creating Walls: Retaining Memory.</p>
+      <p>As a challenge for myself during this time of crisis a new video using light and this model is created and uploaded to Instagram daily.</p>
+      <p>These experimentss will inform my creative practice as I determine how bright ligt needs to be within gallery spaces, how far away it must be to achieve certain effects and the speed that is necessary for it to get the right results.</p>
+          
+      <p>This is the instagram link for <a href="https://www.instagram.com/afadedprairielight/" A Faded Prairie Light</a>. You can see the changes in technique and format as I refine certian processes and explore different methods of capturing some of the detail.</p>
+          
+      <p>As an experiment this project has no final artwork that will be created but will inform future work in technique, duration and methodology. This is unfunded work.</p>
+		  <img class= "text-width" src = "images/camrose-1-light.jpg">
+			<img class= "text-width" src = "images/camrose-3-light.jpg">
+      <p>Two exapmples of light within old farmhouses</p>
+			<img class= "text-width" src = "images/camrose-4-texture.jpg">
+			<img class= "text-width" src = "images/model-1-plaster.jpg">
+			<img class= "text-width" src = "images/model-1-stairs.jpg">
+      <p>Examples of texture in an old farmhouse, and texture inside model</p>
+			<img class= "text-width" src = "images/model-1-complete.jpg">
+			<img class= "text-width" src = "images/model-1-interior-1.jpg">
+			<img class= "text-width" src = "images/model-1-attic.jpg">
+			<img class= "text-width" src = "images/light-outside-1.jpg">
+    </div>
+	</div>
+  <div class = "picture-column">
+		<img class = "imageholder-sm" src = "images/model-1-complete.jpg">
+		<img class = "imageholder-sm" src = "images/model-1-interior-1.jpg">
+		<img class = "imageholder-sm" src = "images/model-1-iattic.jpg">
+		<img class = "imageholder-sm" src = "images/light-outside-1.jpg">
+	</div>
+	
+</div>
+</body>
+</html>
