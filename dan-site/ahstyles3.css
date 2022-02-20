@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html{
+    margin:0;
+    padding:0;
+}
+
+body{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(images/wall5.gif);
+	min-width: fit-content;
+}
+
+.logo {
+	width: 70px;
+	left: 100px;
+	top: 25px;
+	z-index: 50;
+	position: absolute;
+	height: 166px;
+}
+
+
+
+#outerdiv 
+{
+  position:absolute;
+  left:50%;
+  width: 800px;
+} 
+
+
+#innerdiv
+{
+	display: inline-block;
+	border: 1px solid #B3B5B7;
+	position: relative;
+	left: -430px;
+	overflow: visible;
+	margin-left: auto;
+	margin-right: auto;
+	height: 450px;
+	width: 400px;
+	text-align: left;
+	top: 105px;
+	background-color: #FFFFFF;
+	margin-top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	box-shadow: 0px 0px 17px 2px #000;
+}
+#logo
+{
+	position: relative;
+	height: 112px;
+	cursor: pointer;
+}
+#locTbl
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  border-spacing: 0px;
+  color: #333333;
+  line-height: 13px;
+}
+#content
+{
+  position: absolute;
+  top: 112px;
+  left: 0px;
+  background-image: url('../images/fall_bgimage.jpg');
+  width: 860px;
+  height: 580px;
+}
+#main-title
+{
+	position: absolute;
+	top: 36px;
+	left: -429px;
+	width: 800px;
+	height: 75px;
+	font-size: 45px;
+	color: #000;
+	z-index: 90;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	text-shadow: 0px 0px;
+	vertical-align: middle;
+}
+
+#vertline
+{
+	position: absolute;
+	top: 29px;
+	left: 371px;
+	width: 2px;
+	height: 160px;
+	font-size: 20px;
+	color: #FFF;
+	z-index: 90;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+	font-weight: bold;
+	background-color: #C93;
+}
+
+#facebook
+{
+	position: absolute;
+	top: 29px;
+	left: 50px;
+	width: 50px;
+	z-index: 100;
+}
+
+#contente
+{
+	position: absolute;
+	top: 164px;
+	left: 419px;
+	width: 368px;
+	height: 213px;
+	font-size: 60px;
+	color: #FFFFFF;
+	z-index: 50;
+	font-family: "Times New Roman", Times, serif;
+	text-align: justify;
+	font-weight: normal;
+	text-align: left;
+	text-shadow: 0px 0px;
+}
+
+#footer-contact
+{
+	position: absolute;
+	top: 464px;
+	left: 0px;
+	width: 810px;
+	height: 24px;
+	font-size: 18px;
+	color: #000;
+	z-index: 90;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 0px;
+	font-weight: lighter;
+}
+
+
+.text
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #CCCCCC;
+	float: none;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 12px;
+	text-align: left;
+	font-weight: lighter;
+	white-space: normal;
+}
+
+.textHead
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #CC9933;
+	float: none;
+	padding-top: 12px;
+	padding-bottom: 4px;
+	z-index: 0;
+	font-weight: normal;
+}
+
+
+
+.panel
+{
+	border: 1px solid #FFF;
+	padding: 20px;
+	position: absolute;
+	top: 0px;
+	left: 410px;
+	width: 360px;
+	height: 410px;
+	background-color: #000000;
+	overflow: auto;
+	z-index:100;
+	box-shadow: 0px 0px 17px 2px #000;
+}
+
+#links
+{
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	top: -80px;
+	padding-right: 40px;
+	text-align: right;
+}
+.link
+{
+  margin-right: 2px;
+  margin-top: 2px;  
+}
+
+.vertLine
+{
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.heading
+{
+  color: #000000;
+}
+
+
+a
+{
+	margin-top: 2px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover
+{
+	color: #CC9933;
+}
+a.email
+{
+  color: #AA2020;
+  float: inherit;
+}
+a.email:hover
+{
+	color: #AAAAAA;
+	cursor: pointer;
+}
+a.phone
+{
+	color: #AA2020;
+}
+a.phone:hover
+{
+	color: #AAAAAA;
+}
+
+
+/* On screens that are 600px wide or less, stack the "panels" above each other */
+@media screen and (max-width: 800px) {
+  
+  .panel
+	{
+		border: 1px solid #FFF;
+		padding: 20px;
+		position: absolute;
+		top: 225px;
+		left: 0px;
+		width: 360px;
+		height: auto;
+		min-height: 300px;
+		background-color: #000000;
+		overflow: auto;
+		z-index:100;
+		box-shadow: 0px 0px 17px 2px #FFF;
+	}
+	/* place "creative solutions and strategies" over hands */
+	#contente
+	{
+		position: absolute;
+		
+		left: 25px;
+		width: 368px;
+		height: 213px;
+		font-size: 60px;
+		color: #FFFFFF;
+		z-index: 50;
+		font-family: "Times New Roman", Times, serif;
+		text-align: justify;
+		font-weight: normal;
+		text-align: left;
+		text-shadow: 0px 0px 5px 2px #000;
+	}
+	#innerdiv{
+		left: 0;
+		margin: auto;
+			top: 50;
+	}
+
+	#outerdiv{
+		left: 0;
+		position: absolute;
+		margin-left:  auto;
+		width: auto;
+		text-align: center;
+	}
+	#main-title{
+		width:  auto;
+		margin:  auto;
+		left: 0%;
+		font-size:  40px;
+		position: relative;
+		top: 10px;
+	}
+	#footer-contact{
+		width: auto;
+	}
+}
