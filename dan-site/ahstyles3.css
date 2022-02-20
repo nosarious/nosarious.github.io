@@ -257,7 +257,7 @@ a.phone:hover
 
 
 /* On screens that are 600px wide or less, stack the "panels" above each other */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 4500px) and (-webkit-device-pixel-ratio: 3) {
   
   .panel
 	{
