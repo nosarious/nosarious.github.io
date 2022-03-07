@@ -90,7 +90,7 @@ function checkSizes()
   var cwidth = $(window).width()
   var cheight= $(window).height()
 
-  if (cwidth < 800){ /* outerdiv too wide for screen */
+  if (cwidth < 800 || cwidth<cheight){ /* outerdiv too wide for screen */
     var outerPadding = (cwidth-400)/2;
     $('.panel').removeClass('widePanel').addClass('narrowPanel');
     $('.panel').css({'left':0+'px','margin-right':outerPadding+'px'}); 
