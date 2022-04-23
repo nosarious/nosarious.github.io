@@ -54,7 +54,7 @@ function Clicked(what) {
 
   if (currentId != '') 
   {
-    $(currentId).fadeOut(500,
+    $(currentId).fadeOut(2000,
       function () { ClickDisplay(id); });
     return;
   }
