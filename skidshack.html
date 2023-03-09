@@ -1,0 +1,137 @@
+<style>
+    /* This keeps child nodes hidden while the element loads */
+    :not(:defined) > * {
+      display: none;
+    }
+    .ar-button {
+      background-image: url(../assets/ic_view_in_ar_new_googblue_48dp.png);
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: 12px 50%;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 16px;
+      padding: 0px 16px 0px 40px;
+      font-family: Roboto Regular, Helvetica Neue, sans-serif;
+      font-size: 14px;
+      color:#4285f4;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 18px;
+      border: 1px solid #DADCE0;
+    }
+    .ar-button:active {
+      background-color: #E8EAED;
+    }
+    .ar-button:focus {
+      outline: none;
+    }
+    .ar-button:focus-visible {
+      outline: 1px solid #4285f4;
+    }
+    .hotspot {
+      position: relative;
+      background: #ddd;
+      border-radius: 32px;
+      box-sizing: border-box;
+      border: 0;
+      --min-hotspot-opacity: 0.5;
+      width: 24px;
+      height: 24px;
+      padding: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    .hotspot:focus {
+      border: 4px solid rgb(0, 128, 200);
+      width: 32px;
+      height: 32px;
+      outline: none;
+    }
+    .hotspot > * {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+    .hotspot:not([data-visible]) > * {
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(calc(-50% + 4px));
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .info {
+      display: block;
+      position: absolute;
+      font-family: Futura, Helvetica Neue, sans-serif;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 700;
+      font-size: 18px;
+      max-width: 128px;
+      padding: 0.5em 1em;
+      background: #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      left: calc(100% + 1em);
+      top: 50%;
+    }
+    
+</style>
+<model-viewer
+    src="complete-skidshack-mar9.glb"
+    ios-src="complete-skidshack-mar9.usdz"
+    poster=".skid-placement.png"
+    camera-orbit="0.9677rad 1.2427rad auto"
+    shadow-intensity="1"
+    ar
+    ar-modes="webxr scene-viewer quick-look fallback"
+    camera-controls
+    alt="3D model of a countertop mixer"
+>
+    <button slot="ar-button" class="ar-button">View in your space</button>
+    <button
+        slot="hotspot-1"
+        class="hotspot"
+        data-position="0.009m 0.14m 0.02m"
+        data-normal="0.77m 0.64m -0.08m"
+        data-visibility-attribute="visible"
+    >
+        <span class="info">Beater</span>
+    </button>
+    <button
+        slot="hotspot-2"
+        class="hotspot"
+        data-position="0.03m 0.132m 0.148m"
+        data-normal="0.33m 0.13m 0.93m"
+        data-visibility-attribute="visible"
+    >
+        <span class="info">Bowl</span>
+    </button>
+    <button
+        slot="hotspot-3"
+        class="hotspot"
+        data-position="0m 0.258m -0.142m"
+        data-normal="0m 0.26m -0.97m"
+        data-visibility-attribute="visible"
+    >
+        <span class="info">Speed</span>
+    </button>
+    <button
+        slot="hotspot-4"
+        class="hotspot"
+        data-position="0.004m 0.270m 0.102m"
+        data-normal="0.29m 0.96m 0m"
+        data-visibility-attribute="visible"
+    >
+        <span class="info">Accessories</span>
+    </button>
+    <button
+        slot="hotspot-5"
+        class="hotspot"
+        data-position="-0.056m 0.188m -0.093m"
+        data-normal="-1m 0m 0m"
+        data-visibility-attribute="visible"
+    >
+        <span class="info">Hinge</span>
+    </button>
+</model-viewer>
